@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class compleanno {
+
+	public static void main(String[] args) {
+		
+	Scanner tastiera = new Scanner(System.in);	
+	
+	int anno;
+	int età;
+	
+	System.out.println("inserisci l'anno di nascita e l'età");
+	
+	anno = tastiera.nextInt();
+	età = tastiera.nextInt();
+	
+	System.out.println("festeggerai 50 anni nel:");
+	System.out.println(anno + 50);
+	
+	}
+
+}
