@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class progetto3 {
+
+	public static void main(String[] args) {
+		
+		final double TASSO_INTERESSE_ANNUO = 7.49;
+		final double TASSO_INTERESSE_MENSILE = TASSO_INTERESSE_ANNUO / 12;
+				
+		Scanner tastiera = new Scanner(System.in);
+		
+		System.out.println("Inserire il pagamento mensile dell'ipoteca");
+		double pag_mensile_ipoteca = tastiera.nextDouble();
+		
+		System.out.println("Inserire il debito rimanente");
+		double debito_rimanente = tastiera.nextDouble();
+		
+		int mesi = (int) ( debito_rimanente / pag_mensile_ipoteca );
+		
+		double interesse_mensile = ( pag_mensile_ipoteca * TASSO_INTERESSE_MENSILE ) / 100;
+		double interesse_totale = interesse_mensile * mesi;
+		double quota_capitale = pag_mensile_ipoteca - interesse_mensile;
+		
+		System.out.println("L'interesse mensile è: " + interesse_mensile + "\n" + 
+								"L'interesse totale è: " + interesse_totale + "\n" + 
+									"La quota capitale è: " + quota_capitale); 
+		
+		tastiera.close();
+		
+	}
+
+}
